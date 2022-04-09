@@ -9,7 +9,7 @@ alert(`Результат: ${userString.substring(startSliceIndex, endSliceIndex
 
 const userText = prompt("Введите текст").trim();
 const wordFromText = prompt("Введите слово из текста").trim();
-const indexOfWord = (userText.indexOf(wordFromText));
+const indexOfWord = userText.indexOf(wordFromText);
 
 alert(`Результат: ${userText.substring(0, indexOfWord)}`);
 
@@ -20,14 +20,6 @@ alert(`Результат: ${userText.substring(0, indexOfWord)}`);
 
 const javaScriptDescription = "JavaScript — мультипарадигменный язык программирования. Поддерживает объектно-ориентированный, императивный и функциональный стили. Является реализацией спецификации ECMAScript. JavaScript обычно используется как встраиваемый язык для программного доступа к объектам приложений."
 
-const javaScriptHalf = javaScriptDescription.substring(0, 139);
+const javaScriptNew = javaScriptDescription.substring(0, 139).replaceAll("а", "А").replaceAll(" ", "").repeat(3)/*.length / 2*/;
 
-const javaScriptReplacement = javaScriptHalf.replaceAll("а", "А");
-
-const javaScriptSpace = (javaScriptReplacement.replaceAll(" ", "")).repeat(3);
-
-const javaScriptMiddle = javaScriptSpace.length / 2;
-
-const javaScriptOne = javaScriptSpace.substring(191, 192);
-
-console.log(javaScriptOne);
+console.log(javaScriptNew.substring(191, 192));
